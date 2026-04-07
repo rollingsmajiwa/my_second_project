@@ -21,6 +21,7 @@ list-style-type: none;
 font-size: 20px;
 padding: 20px;
 gap: 30px;
+flex-wrap: wrap;
 }
 ul li a {
     text-decoration: none;
@@ -28,10 +29,15 @@ ul li a {
     font-weight: bold;
     
 }
+ul li a:hover {
+    transform: scale(1.5);
+    background-color: white;
+    color: #000000;
+}
 .hero {
 
 
-height: 380px;
+max-height: 380px;
 background: #757575;
 display: flex;
 flex-direction: column;
@@ -50,14 +56,15 @@ line-height: 77px;
 text-align: center;
 
 color: #000000;
-width: 884px;
-height: 110px;
+max-width: 884px;
+max-height: 110px;
 
 
 }
 .article {
     border: 2px solid black;
-    width: 380px;
+    width: 100%;
+    min-width: 380px;
     background-color: lightgray;
    
 }
@@ -108,7 +115,21 @@ text-align: center;
     font-weight: bold;
     border: none;
     padding: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+    box-shadow: 0px 8px 10px black;
     
+}
+.btn1:hover {
+    background-color: lightblue;
+    color: black;
+    cursor: pointer;
+}
+.btn2:hover {
+    background-color: lightblue;
+    color: black;
+    cursor: pointer;
 }
 section {
     display: grid;
@@ -156,6 +177,9 @@ background: #D9D9D9;
     font-weight: bold;
     border: none; 
     padding: 15px;
+     transition: all 0.2s;
+    box-shadow: 0px 5px 10px black;
+    
 }
 .about {
     padding-left: 10px;
@@ -163,14 +187,14 @@ background: #D9D9D9;
     display: flex;
     justify-content: left;
     gap: 20px;
+    margin-top: 10px;
 }
 .hp {
     float: right;
 }
 .about p {
 
-width: 600px;
-height: 60px;
+max-width: 600px;
 
 
 font-family: 'Courier New', Courier, monospace;
@@ -183,16 +207,30 @@ color: #000000;
 
 
 }
-wrapper {
-width: 1440px;
-height: 1500px;
-
-background: #FFFFFF;
+.wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
 
 }
+
+@media (max-width: 768px) {
+    section {
+    display: grid;
+    grid-template-columns: 100%;
+   
+   
+}
+    nav ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+}
+
+
 footer {
-width: 1440px;
-height: 52px;
+max-width: 1440px;
+max-height: 52px;
 
 
 background: #8E8E93;
@@ -224,6 +262,26 @@ form {
 }
 
 
+
+
+
+.single-post-view {
+    max-width: 1000px;
+    margin: 40px;
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+}
+.full-post {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    object-fit: cover;
+
+}
+.full-text {
+    padding: 10px;
+}
 
 
 
