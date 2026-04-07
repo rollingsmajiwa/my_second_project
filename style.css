@@ -67,6 +67,7 @@ max-height: 110px;
     min-width: 380px;
     background-color: lightgray;
    
+   
 }
 .article1 {
     padding-right: 10px;
@@ -135,7 +136,10 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 label {
 
@@ -279,10 +283,22 @@ form {
     object-fit: cover;
 
 }
-.full-text {
-    padding: 10px;
+.article h3, p {
+    padding-left: 10px;
 }
+.btn-read {
+text-decoration: none;
+color: blue;
+}
+.btn-read:hover {
+    color: black;
+    transform: scale(2);
 
+}
+.txt {
+    border-radius: 20px;
+    border: 2px solid black;
+}
 
 
 
